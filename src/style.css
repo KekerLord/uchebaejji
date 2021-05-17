@@ -1,0 +1,23 @@
+.container {
+  flex-direction: column;
+  max-width: 100vw;
+}
+
+table {
+  display: block;
+  overflow: scroll;
+  height: 50ch;
+  width: 50ch;
+  resize: both;
+}
+
+tr:hover {
+  background-color: rgba(0, 153, 255, 0.3);
+}
+
+
+
+
+.hidden {
+  display: none;
+}

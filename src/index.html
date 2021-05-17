@@ -6,10 +6,37 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  Test
+  <button id="toggle-mode">Режим</button>
+
+  <div class="container">
+      <h3 class="encode">Зашифровать</h3>
+      <h3 class="decode">Расшифровать</h3>
+
+    <div>
+      <label>Исходный текст
+        <input type="text" id="from" value="Ты Алеша">
+      </label>
+    </div>
+    <div>
+      <label>Ключ
+        <input type="text" id="key" value="ключ">
+      </label>
+    </div>
+    <div>
+      <label>Результат
+        <input type="text" id="result">
+      </label>
+    </div>
+    <div><button id="run">Выполнить</button></div>
+    <div><button id="clear">Очистить</button></div>
+    
+  </div>
+
+
   <script src="./main.ts"></script>
 </body>
 
