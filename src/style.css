@@ -12,9 +12,8 @@ table {
 }
 
 tr:hover {
-  background-color: rgba(0, 153, 255, 0.3);
+  background-color: hsla(204, 100%, 50%, 0.123);
 }
-
 
 
 
