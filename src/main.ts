@@ -59,7 +59,7 @@ const main = () => {
 
       for (let j = 0; j < vijener.alphabet.length; ++j) {
         const td = document.createElement('td')
-        td.innerHTML = vijener.alphabet[(j + i)%vijener.alphabet.length]
+        td.innerHTML = vijener.alphabet[(j + i) % vijener.alphabet.length]
         tr.appendChild(td)
       }
       tbody.appendChild(tr)
