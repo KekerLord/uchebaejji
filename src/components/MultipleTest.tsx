@@ -1,0 +1,75 @@
+import React, { useState } from 'react'
+import Multiple from '../lib/multiple';
+
+type Mode = 'encode' | 'decode'
+
+const multipleTest = () => {
+  const alphabet: string = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя,.<>/?[]{}_-+=!~`@#$%^&*()|\'"0123456789'
+
+  const multiple = new Multiple(alphabet);
+
+  const [mode, setMode]: [Mode, React.Dispatch<React.SetStateAction<Mode>>] = useState('encode')
+  const [input, setInput] = useState('')
+  const [key1, setKey1] = useState('')
+  const [key2, setKey2] = useState('')
+  const [key3, setKey3] = useState('')
+  const [result, setResult] = useState('')
+
+  const toggleMode = () => {
+    setMode((mode === 'encode') ? 'decode' : 'encode')
+  }
+
+  const run = (runMode: 'encode' | 'decode') => {
+    console.log('Run');
+    console.log('Multiple:', multiple);
+
+    let result;
+
+    if (runMode === 'encode') result = multiple.encode(input, [key1, key2, key3])
+    else result = multiple.decode(input, [key1, key2, key3])
+
+    setResult(result)
+    console.log(result);
+  }
+
+  const clear = () => {
+    setInput('')
+    setKey1('')
+    setKey2('')
+    setKey3('')
+    setResult('')
+  }
+
+  return (
+    <div className="widget">
+      <button id="toggle-mode" onClick={() => toggleMode()}>Режим</button>
+
+      <div className="input-group"><div>
+        <label>Исходный текст
+          <input type="text" id="input" value={input} onChange={(event) => setInput(event.target.value)} />
+        </label></div>
+        <div>
+          <label>Ключ 1
+        <input type="text" id="key1" value={key1} onChange={(event) => setKey1(event.target.value)} />
+          </label>
+        </div><div>
+          <label>Ключ 2
+        <input type="text" id="key2" value={key2} onChange={(event) => setKey2(event.target.value)} />
+          </label></div><div>
+          <label>Ключ 3
+        <input type="text" id="key3" value={key3} onChange={(event) => setKey3(event.target.value)} />
+          </label></div>
+        <div>
+          <label>Результат
+        <input type="text" id="result" value={result} onChange={(event) => setResult(event.target.value)} />
+          </label>
+        </div>
+        <div><button id="run" onClick={() => run(mode)}>{mode === 'encode' ? 'Зашифровать' : 'Расшифровать'}</button></div>
+        <div><button id="clear" onClick={() => clear()}>Очистить</button></div>
+      </div>
+    </div>
+  )
+}
+
+export default multipleTest
+
