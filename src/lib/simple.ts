@@ -19,7 +19,9 @@ export default class Simple {
 
     const inversedDim = { width: dim.height, height: dim.width }
 
-    const inversedKey = key.map((value) => key[value])
+    const inversedKey = []
+    for (let i = 0; i < key.length; ++i) inversedKey[key[i]] = i 
+
     console.log('key', key);
     console.log('inversedKey', inversedKey);
 
