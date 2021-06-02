@@ -1,11 +1,14 @@
-import Simple from "./src/lib/simple";
+const run = (input, key) => {
+  let encoded = '';
+  for (let i = 0; i < raw.length; ++i)
+    encoded += String.fromCharCode(input.charCodeAt(i) ^ key.charCodeAt(i % key.length))
+  return encoded;
+}
 
-const simple = new Simple
+const raw = 'Я не Алёша, а ты?'
+const key = ''
 
-const raw = '0123456789AB'
-const encoded = simple.encode(raw, [3, 0, 2, 1], { width: 4, height: 3 })
-const decoded = simple.decode(encoded, [3, 0, 2, 1], { width: 4, height: 3 })
+const encoded = run(raw, key)
+const decoded = run(encoded, key)
 
-console.log(raw);
-console.log(encoded);
-console.log(decoded);
+console.log({ raw, key, encoded, decoded });

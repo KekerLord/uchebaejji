@@ -60,7 +60,7 @@ const multipleTest = () => {
           </label></div>
         <div>
           <label>Результат
-        <input type="text" id="result" value={result} onChange={(event) => setResult(event.target.value)} />
+        <input type="text" id="result" readOnly value={result} />
           </label>
         </div>
         <div><button id="run" onClick={() => run(encodeMode)}>{encodeMode ? 'Зашифровать' : 'Расшифровать'}</button></div>

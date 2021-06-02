@@ -1,9 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
-const SimpleTestTable = ({ input, dim }: { input: string, dim: { width: number, height: number } }) => {
-  const splitMessage = input.split('')
-  console.log(splitMessage);
-
+const CommonTestTable = ({ input, dim }: { input: string, dim: { width: number, height: number } }) => {
   const messageTables = []
   const maxI = Math.ceil(input.length / (dim.width * dim.height))
 
@@ -37,4 +34,4 @@ const SimpleTestTable = ({ input, dim }: { input: string, dim: { width: number, 
   )
 }
 
-export default SimpleTestTable
+export default CommonTestTable
