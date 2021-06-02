@@ -37,9 +37,7 @@ const VijenerTest = () => {
 
   return (
     <div className="widget">
-      <button id="toggle-mode" onClick={() => toggleMode()}>Режим</button>
-
-      <div className="input-group">
+      <div className="input-group"><div><button id="toggle-mode" onClick={() => toggleMode()}>Режим</button></div>
         <div><label>Исходный текст
           <input type="text" id="input" value={input} onChange={(event) => setInput(event.target.value)} />
         </label></div>
@@ -51,7 +49,6 @@ const VijenerTest = () => {
         <div><label>Результат
         <input type="text" id="result" value={result} onChange={(event) => setResult(event.target.value)} />
         </label></div>
-
 
         <div><button id="run" onClick={() => run(mode)}>{mode === 'encode' ? 'Зашифровать' : 'Расшифровать'}</button></div>
         <div><button id="clear" onClick={() => clear()}>Очистить</button></div>
