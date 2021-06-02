@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Simple from '../lib/simple';
+import SimpleTestTable from './SimpleTestTable';
 
 const SimpleTest = () => {
   const simple = new Simple();
@@ -66,6 +67,7 @@ const SimpleTest = () => {
         <div><button id="run" onClick={() => run(encodeMode)}>{encodeMode ? 'Зашифровать' : 'Расшифровать'}</button></div>
         <div><button id="clear" onClick={() => clear()}>Очистить</button></div>
       </div>
+      {encodeMode && <SimpleTestTable input={input} dim={{ height, width }} />}
     </div>
   )
 }
