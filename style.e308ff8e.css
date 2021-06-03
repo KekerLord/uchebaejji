@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0
+}
+
+html,
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 70%;
+  overflow: hidden
+}
+
+.container>* {
+  max-width: 100%;
+}
+
+table {
+  display: block;
+  overflow: scroll;
+  resize: both;
+  width: auto;
+}
+
+tr:hover {
+  background-color: hsla(204, 100%, 50%, 0.123);
+}
+
+nav>button {
+  margin: 0.5em;
+}
+
+.widget {
+  margin: 0.5em;
+}
+
+.widget .input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group>* {
+  padding-bottom: 0.5em;
+}
+
+input {
+  width: 100%;
+}
+
+button {
+  border: none;
+  background: rgb(34, 170, 255);
+  color: white;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+button.selected {
+  background-color: rgb(74, 74, 255);
+}
+
+/*# sourceMappingURL=/style.e308ff8e.css.map */
