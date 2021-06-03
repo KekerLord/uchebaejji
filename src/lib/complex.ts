@@ -4,17 +4,18 @@ export default class Complex {
   private readonly simple = new Simple()
 
   static addSpaces(raw: string, spacesKey: number[], dim: { width: number, height: number }) {
-    const maxI = Math.ceil(raw.length / (dim.width * dim.height))
-
-    console.log("repeat: ", maxI * dim.width * dim.height - raw.length);
+    let maxI = Math.ceil(raw.length / (dim.width * dim.height))
 
     raw += ' '.repeat(maxI * dim.width * dim.height - raw.length)
+
+    maxI = Math.ceil((raw.length + dim.height * maxI) / (dim.width * dim.height))
+
     const rawList = raw.split('')
 
     for (let i = 0; i < maxI; ++i)
       for (let k = 0; k < dim.height; ++k) {
         const index = i * dim.width * dim.height + k * dim.width + spacesKey[k]
-        console.log({ i, 'spacesKey[k]': spacesKey[k], index, 'rawList[index]': rawList[index], rawList });
+        console.log({ i, k, index });
 
         rawList.splice(index, 0, ' ')
       }

@@ -17,16 +17,12 @@ const VijenerTest = () => {
   }
 
   const run = (runMode: 'encode' | 'decode') => {
-    console.log('Run');
-    console.log('Vijener:', vijener);
-
     let result;
 
     if (runMode === 'encode') result = vijener.encode(input, key)
     else result = vijener.decode(input, key)
 
     setResult(result)
-    console.log(result);
   }
 
   const clear = () => {

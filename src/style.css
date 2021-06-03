@@ -62,5 +62,5 @@ button {
 }
 
 button.selected {
-  background-color: rgb(74, 74, 255)
+  background-color: rgb(74, 74, 255);
 }

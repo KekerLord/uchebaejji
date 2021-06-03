@@ -18,7 +18,7 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@types/node": "^15.6.2",
+    "@types/node": "^15.9.0",
     "@types/react": "^17.0.8",
     "@types/react-dom": "^17.0.5",
     "push-dir": "^0.4.1",

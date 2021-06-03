@@ -18,16 +18,12 @@ const multipleTest = () => {
   }
 
   const run = (runEncodeMode: boolean) => {
-    console.log('Run');
-    console.log('Multiple:', multiple);
-
     let result;
 
     if (runEncodeMode) result = multiple.encode(input, [key1, key2, key3])
     else result = multiple.decode(input, [key1, key2, key3])
 
     setResult(result)
-    console.log(result);
   }
 
   const clear = () => {

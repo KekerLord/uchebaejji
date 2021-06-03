@@ -33,16 +33,12 @@ const ComplexTest = () => {
     }
 
     const run = (runEncodeMode: boolean) => {
-        console.log('Run');
-        console.log('Complex:', complex);
-
         let result;
 
         if (runEncodeMode) result = complex.encode(input, keyList, spacesKeyList, { width, height })
         else result = complex.decode(input, keyList, spacesKeyList, { width, height })
 
         setResult(result)
-        console.log(result);
     }
 
     return (

@@ -23,9 +23,6 @@ const SimpleTest = () => {
   }
 
   const run = (runEncodeMode: boolean) => {
-    console.log('Run');
-    console.log('Simple:', simple);
-
     let result;
 
     const keyList = key.trim().split(' ').map((word) => Number(word))
@@ -34,7 +31,6 @@ const SimpleTest = () => {
     else result = simple.decode(input, keyList, { width, height })
 
     setResult(result)
-    console.log(result);
   }
 
   return (
